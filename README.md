@@ -1,5 +1,18 @@
 # Teste front-end icasei
 
+## Como usar
+  ```bash
+  npm install
+  npm start
+  ```
+  O Lerna cuidará de iniciar os servidores
+  
+- mf_drawer: `http://localhost:3001/`
+- mf_videos: `http://localhost:3002/`
+- backend: `http://localhost:3000/`
+  - `api/` - videos 
+  - `api/:search` - videos pesquisa
+
 ### notas
   usei `npx create-single-spa` para criar 2 micro-frontends
   
