@@ -3,7 +3,9 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "mf_drawer"
+      "backend",
+      "mf_drawer",
+      "mf_videos"
     ]
   },
   "scripts": {

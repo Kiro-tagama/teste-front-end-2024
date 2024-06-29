@@ -1,6 +1,8 @@
 import './style.css';
 
-import mf_videos from 'http://localhost:3002/remoteEntry.js'
+const url_mf_videos = "http://localhost:3002/remoteEntry.js"
+// const mf_videos = async () => await import("app2/App")
+// .then(res=>res)
 
 const appElement = document.getElementById('app');
 !appElement?console.error('Element with ID "app" not found!')
@@ -11,5 +13,6 @@ const appElement = document.getElementById('app');
       <a href="#videos">VIDEOS</a> 
       <a href="#favorite">FAVORITOS <div>3</div></a> 
     </aside>
+    <iframe src="http://localhost:3002/${window.location.hash}" width="100%" height="100%" frameBorder="0"></iframe>
   </div>
 `

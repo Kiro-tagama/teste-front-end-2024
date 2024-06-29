@@ -1,2 +1,4 @@
 teste-front-end-2024-main
 node_modules
+package-lock.json
+*.log
