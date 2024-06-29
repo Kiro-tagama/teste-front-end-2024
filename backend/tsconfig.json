@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
+    "module": "commonjs",
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
@@ -12,5 +12,5 @@
     "declaration": true,
     "sourceMap": true
   },
-  "include": ["src/**/*.ts", "src/index.ts"]
+  "include": ["src/**/*.ts"]
 }

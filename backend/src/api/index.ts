@@ -1,3 +1,4 @@
+import 'dotenv/config'
 const apiYtKey = process.env.API_YT
 const urlBaseApiYt = (params:string)=>`https://www.googleapis.com/youtube/v3/${params}&key=${apiYtKey}`
 
