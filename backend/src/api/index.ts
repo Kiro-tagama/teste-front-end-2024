@@ -7,7 +7,6 @@ export function getVideos(){
   const params = `search?maxResults=${maxResults}&order=date&part=snippet&type=video`
   return fetch(urlBaseApiYt(params))
    .then(response => response.json())
-   .then(data => data.items)
    .catch(error => console.error('Error:', error))
 }
 
@@ -16,7 +15,6 @@ export function searchVideos(searchTerm:string){
   const params = `search?q=${searchTerm}&part=snippet&maxResults=${maxResults}&type=video`
   return fetch(urlBaseApiYt(params))
    .then(response => response.json())
-   .then(data => data.items)
    .catch(error => console.error('Error:', error))
 }
 
@@ -25,6 +23,5 @@ export function getFavVideos() {
   const params = `videos?id=${favList.join(',')}`
   return fetch(urlBaseApiYt(params))
    .then(response => response.json())
-   .then(data => data.items)
    .catch(error => console.error('Error:', error))
 }

@@ -70,7 +70,7 @@ h1 {
   color: #888;
 }
 
-button, a {
+button, a, input {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -97,12 +97,13 @@ aside, main{
   padding: 1rem;
   gap: .3rem;
 }
+
 aside{
   width: 100%;
   max-width: 20rem;
 }
+
 main{
-  flex: 1;
   width: 100%;
 }
 
@@ -111,6 +112,7 @@ aside a{
   justify-content: space-between;
   align-items: center;
 }
+
 aside a div{
   display: flex;
   justify-content: center;

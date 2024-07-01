@@ -24,9 +24,9 @@
 ### Task
   - [] backend
     - [] save list fav ?
-    - [] get list do yt
+    - [x] get list do yt
     - [] get filter list do yt
 
   - [] front-end
-    - [] create menu lateral (mf drawer) que será a raiz/route sendo a base do front
-    - [] create conteudo
+    - [x] create menu lateral (mf drawer) que será a raiz/route sendo a base do front
+    - [x] create conteudo
