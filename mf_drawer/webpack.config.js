@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
@@ -31,17 +31,17 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "app1",
       remotes: {
-        app2: "http://localhost:3002/remoteEntry.js",
+        app2: "app2@http://localhost:3002/remoteEntry.js",
       },
     }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      filename: "./index.html", 
+      filename: "./index.html",
       inject: "body",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css", 
+      filename: "[name].css",
     }),
   ],
 };
