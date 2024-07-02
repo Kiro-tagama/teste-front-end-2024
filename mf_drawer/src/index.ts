@@ -1,4 +1,5 @@
 import './style.css';
+// import { updateFavoriteCount } from './utils/updateFavoriteCount.ts';
 
 import("app2/App")
 .then(res=>res.default)
@@ -11,8 +12,10 @@ const appElement = document.getElementById('app');
     <aside>
       <h2>Título da Seção</h2> 
       <a href="#videos">VÍDEOS</a> 
-      <a href="#favorite">FAVORITOS <div>3</div></a> 
+      <a href="#favorite">FAVORITOS <div class="favorite-count">0</div></a> 
     </aside>
     <main id="mf_videos"></main>
   </div>
 `
+
+//         updateFavoriteCount()

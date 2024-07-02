@@ -1,12 +1,13 @@
+import { baseUrl } from "../..";
+
 export function handleFavorite(event: Event) {
   const button = event.target as HTMLButtonElement;
   const videoId = button.dataset.videoId;
+  console.log(videoId);
 
   if (!videoId) return;
 
-  const url = window.location.hash.slice(1) === 'favorite'
-    ? 'http://localhost:3000/favorite'
-    : 'http://localhost:3000/favorite';
+  const url = baseUrl('favorite')
 
   const method = button.classList.contains('favorited') ? 'DELETE' : 'POST';
 

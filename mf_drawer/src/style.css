@@ -133,6 +133,9 @@ aside a div{
     width: auto;
     max-width:none;
   }
+  main{
+    width: auto;
+  }
 }
 
 @media (prefers-color-scheme: light) {
