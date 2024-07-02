@@ -23,11 +23,15 @@
 
 ### Task
   - [] backend
-    - [x] save list fav ?
+    - [x] save list fav
     - [x] get list do yt
     - [x] get filter list do yt
+    - [] create tests
 
   - [] front-end
     - [x] create menu lateral (mf drawer) que será a raiz/route sendo a base do front
     - [x] create conteudo
     - [] add to fav button
+    - [] save info of fav and use
+    - [] smart renderization
+    - [] create tests
