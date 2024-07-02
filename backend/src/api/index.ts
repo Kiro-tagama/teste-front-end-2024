@@ -18,8 +18,7 @@ export function searchVideos(searchTerm:string){
    .catch(error => console.error('Error:', error))
 }
 
-export function getFavVideos() {
-  const favList = ["7lCDEYXw3mM","7lCDEYXw3mM"]
+export function getFavVideos(favList:string[]) {
   const params = `videos?id=${favList.join(',')}`
   return fetch(urlBaseApiYt(params))
    .then(response => response.json())
