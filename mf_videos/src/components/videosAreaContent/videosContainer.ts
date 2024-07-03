@@ -5,7 +5,8 @@ import { renderVideos } from "./videosCard";
 import axios from "axios"
 
 export function fetchVideos(favoriteId: string) {
-  const url = favoriteId ? baseUrl('/favorite') : baseUrl('/videos');
+  const url = favoriteId ? baseUrl('/favorites') : baseUrl('/videos');
+  console.log('url: '+url)
   
   axios.get(url)
     .then(response => response.data.items)

@@ -24,7 +24,20 @@ export function renderVideos(videos: Video[]) {
     videosContainer.appendChild(videoItem);
   });
 
+  // Add event listeners to favorite buttons
   document.querySelectorAll('.favorite-btn').forEach(button => {
     button.addEventListener('click', handleFavorite);
   });
 }
+
+// Update favorite symbols when the favoriteIds state changes
+// useFavoriteStore.subscribe((favoriteIds) => {
+//   document.querySelectorAll('.favorite-btn').forEach(button => {
+//     const videoId = button.dataset.videoId;
+//     if (favoriteIds.includes(videoId)) {
+//       button.textContent = '⭐';
+//     } else {
+//       button.textContent = '☆';
+//     }
+//   });
+// });
