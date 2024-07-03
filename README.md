@@ -1,6 +1,9 @@
 # Teste front-end icasei
+Teste de micro front-end vanilla ts
 
 ## Como usar
+
+  execute na raiz do projeto usando npm  
   ```bash
   npm install
   npm start
@@ -9,33 +12,15 @@
   
 - mf_drawer: `http://localhost:3001/`
 - mf_videos: `http://localhost:3002/`
+
 - backend: `http://localhost:3000/`
-  - `api/videos` - videos 
-  - `api/videos/:search` - videos pesquisa
+  - `api/videos` - vídeos 
+  - `api/videos/:search` - vídeos pesquisa
   - `api/favorite`, `{id:String}` - get,post,delete
-  o backend usa o express session para salvar o id do usuario assim pegado o is do browser para fazer a manipulação e controle de sessão
-
-### notas
-  usei `npx create-single-spa` para criar 2 micro-frontends
   
-  *preciso de controle de sessão e BFF no backend
-    bff se conecta com a api do yt 
-    o usuario se mantem ativo com o servidor usando sua credencial do propria, registrada assim que faz o post de um id
+obs: o backend usa o express session para salvar o id do usuário assim pegado o is do browser para fazer a manipulação e controle de sessão
 
-  
+## OBS
+  foi usado lerna para iniciar o servidor mas tu pode entrar nas 3 pastas e iniciar normalmente usando `npm i` e `npm run dev` ou o de sua preferência como yarn, pnpm
 
-### Task
-  - [] backend
-    - [x] save list fav
-    - [x] get list do yt
-    - [x] get filter list do yt
-    - [] create tests
-
-  - [] front-end
-    - [x] create menu lateral (mf drawer) que será a raiz/route sendo a base do front
-    - [x] create conteudo
-    - [] add to fav button
-    - [] search video
-    - [] save info of fav and use
-    - [] smart renderization
-    - [] create tests
+  o projeto foi configurado com webpack e ts, zustand para controle de estado e é html,js/ts e css puro
