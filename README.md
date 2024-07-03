@@ -10,16 +10,19 @@
 - mf_drawer: `http://localhost:3001/`
 - mf_videos: `http://localhost:3002/`
 - backend: `http://localhost:3000/`
-  - `api/` - videos 
-  - `api/:search` - videos pesquisa
+  - `api/videos` - videos 
+  - `api/videos/:search` - videos pesquisa
+  - `api/favorite`, `{id:String}` - get,post,delete
+  o backend usa o express session para salvar o id do usuario assim pegado o is do browser para fazer a manipulação e controle de sessão
 
 ### notas
   usei `npx create-single-spa` para criar 2 micro-frontends
   
   *preciso de controle de sessão e BFF no backend
     bff se conecta com a api do yt 
-    sessão salva o usuario
-    docker para salvar a lista de fav do usuario?
+    o usuario se mantem ativo com o servidor usando sua credencial do propria, registrada assim que faz o post de um id
+
+  
 
 ### Task
   - [] backend
@@ -32,6 +35,7 @@
     - [x] create menu lateral (mf drawer) que será a raiz/route sendo a base do front
     - [x] create conteudo
     - [] add to fav button
+    - [] search video
     - [] save info of fav and use
     - [] smart renderization
     - [] create tests
