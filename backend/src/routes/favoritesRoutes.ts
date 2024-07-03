@@ -6,6 +6,8 @@ const router = express.Router();
 
 let favoriteOfUsers: Favorite[] = [];
 
+router.get('/all',(req,res)=> res.status(200).json(favoriteOfUsers))
+
 router.post('/', async (req: Request, res: Response) => {
   try {
     const userId = req.session.id;
