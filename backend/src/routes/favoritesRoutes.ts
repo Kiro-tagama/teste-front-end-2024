@@ -52,7 +52,7 @@ router.get('/', async (req: Request, res: Response) => {
     }
 
     const videos = await getFavVideos(videoData);
-    res.status(videos.length == 0 ? 404 : 200).json(videos);
+    res.status(200).json(videos);
   } catch (error) {
     res.status(500).json({ error });
   }
