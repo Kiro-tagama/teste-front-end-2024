@@ -11,7 +11,6 @@ import axios from "axios"
  */
 export function fetchVideos(favoriteId: string, input: string) {
   const url = favoriteId ? baseUrl('/favorites') : baseUrl('/videos/'+ input);
-  console.log('url: '+url)
   
   axios.get(url)
     .then(response => response.data.items)

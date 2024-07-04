@@ -44,3 +44,7 @@ main h2{
   padding: 0;
   z-index: 1; /* Garante que o botão esteja acima do card de vídeo */
 }
+
+.favorite-btn:hover{
+  background-color: #242424;
+}

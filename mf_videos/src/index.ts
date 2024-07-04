@@ -9,8 +9,6 @@ export const baseUrl = (complement:string)=> 'http://localhost:3000/api' + compl
 const navLink = document.querySelectorAll('.navLink'); 
 const appElement = document.getElementById('mf_videos');
 
-const input = document.getElementById('search-input') as HTMLInputElement;
-
 export const videosContainer = document.createElement('div');
 videosContainer.id = 'videos-container';
 
@@ -23,6 +21,9 @@ if (!appElement) {
   appElement.appendChild(videosContainer);
   fetchVideos(favoriteId,'');
 
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  if (input) input.addEventListener('keyup', () => fetchVideos(favoriteId,input.value));
+  
   if (navLink) navLink.forEach(btn=>{
     if (btn) btn.addEventListener('click', ()=>updateContent(appElement, btn));
   })
